@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "version": "dp27-2026-09",
+  "sourceQuestionnaireSha256": "9dc269a45f8e142eee4948a33d513b1d6d5d1cf97a778bd1c6e53c2b3ddd1341",
+  "meta": {
+    "title": "成人共发性失调量表",
+    "recallPeriod": "过去6个月",
+    "instruction": "在 过去6个月 里，您是否符合下列描述？请您在以下各项选择最符合您实际情况的选项，在对应的选项处打“√”。"
+  },
+  "options": [
+    {
+      "value": 1,
+      "label": "完全不符合"
+    },
+    {
+      "value": 2,
+      "label": "比较不符合"
+    },
+    {
+      "value": 3,
+      "label": "不确定"
+    },
+    {
+      "value": 4,
+      "label": "比较符合"
+    },
+    {
+      "value": 5,
+      "label": "完全符合"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "EMO",
+      "label": "情绪问题",
+      "shortLabel": "情绪",
+      "description": "与情绪体验、担忧和自我评价相关的日常描述"
+    },
+    {
+      "id": "BEH",
+      "label": "行为问题",
+      "shortLabel": "行为",
+      "description": "与愤怒表达、人际互动和规则相关行为有关的日常描述"
+    },
+    {
+      "id": "ATT",
+      "label": "注意问题",
+      "shortLabel": "注意",
+      "description": "与注意维持、冲动控制和任务完成有关的日常描述"
+    }
+  ],
+  "items": [
+    {
+      "id": "anx_a_1",
+      "text": "我担心别人不认可我",
+      "dimension": "EMO",
+      "attribute": "a.担忧与焦虑体验"
+    },
+    {
+      "id": "anx_a_3",
+      "text": "面对不确定的事，我会感到紧张",
+      "dimension": "EMO",
+      "attribute": "a.担忧与焦虑体验"
+    },
+    {
+      "id": "anx_a_4",
+      "text": "我会反复想到令我担心的事情",
+      "dimension": "EMO",
+      "attribute": "a.担忧与焦虑体验"
+    },
+    {
+      "id": "anx_b_1",
+      "text": "我经常闷闷不乐",
+      "dimension": "EMO",
+      "attribute": "b.情绪低落与消极体验"
+    },
+    {
+      "id": "anx_b_2",
+      "text": "我很难感受到快乐",
+      "dimension": "EMO",
+      "attribute": "b.情绪低落与消极体验"
+    },
+    {
+      "id": "anx_b_5",
+      "text": "我经常觉得日子过的没意思",
+      "dimension": "EMO",
+      "attribute": "b.情绪低落与消极体验"
+    },
+    {
+      "id": "anx_c_2",
+      "text": "我常常看不起自己",
+      "dimension": "EMO",
+      "attribute": "c.自我否定与低自尊"
+    },
+    {
+      "id": "anx_c_4",
+      "text": "我看不到自己的优点",
+      "dimension": "EMO",
+      "attribute": "c.自我否定与低自尊"
+    },
+    {
+      "id": "anx_c_5",
+      "text": "我觉得自己不值得被善待",
+      "dimension": "EMO",
+      "attribute": "c.自我否定与低自尊"
+    },
+    {
+      "id": "agg_a_1",
+      "text": "我一发火就很难停下来",
+      "dimension": "BEH",
+      "attribute": "a.愤怒表达与情绪爆发"
+    },
+    {
+      "id": "agg_a_2",
+      "text": "我会突然发脾气",
+      "dimension": "BEH",
+      "attribute": "a.愤怒表达与情绪爆发"
+    },
+    {
+      "id": "agg_a_3",
+      "text": "我生气时会大声喊叫",
+      "dimension": "BEH",
+      "attribute": "a.愤怒表达与情绪爆发"
+    },
+    {
+      "id": "agg_b_1",
+      "text": "我会主动挑衅别人",
+      "dimension": "BEH",
+      "attribute": "b.攻击与伤害行为"
+    },
+    {
+      "id": "agg_b_3",
+      "text": "我会用言语贬低别人",
+      "dimension": "BEH",
+      "attribute": "b.攻击与伤害行为"
+    },
+    {
+      "id": "agg_b_4",
+      "text": "我会当众让别人难堪",
+      "dimension": "BEH",
+      "attribute": "b.攻击与伤害行为"
+    },
+    {
+      "id": "agg_d_2",
+      "text": "我答应的事情都不算数",
+      "dimension": "BEH",
+      "attribute": "d.规则违背与破坏行为"
+    },
+    {
+      "id": "agg_d_3",
+      "text": "我会未经允许拿走不属于自己的物品",
+      "dimension": "BEH",
+      "attribute": "d.规则违背与破坏行为"
+    },
+    {
+      "id": "agg_d_5",
+      "text": "我明知有规定也不照做",
+      "dimension": "BEH",
+      "attribute": "d.规则违背与破坏行为"
+    },
+    {
+      "id": "att_a_2",
+      "text": "我会不知不觉发呆",
+      "dimension": "ATT",
+      "attribute": "a.注意维持与易分心"
+    },
+    {
+      "id": "att_a_3",
+      "text": "我会忘记自己刚刚准备做什么",
+      "dimension": "ATT",
+      "attribute": "a.注意维持与易分心"
+    },
+    {
+      "id": "att_a_4",
+      "text": "听别人说话时，我会不知不觉走神",
+      "dimension": "ATT",
+      "attribute": "a.注意维持与易分心"
+    },
+    {
+      "id": "att_b_1",
+      "text": "我常常凭一时冲动做决定",
+      "dimension": "ATT",
+      "attribute": "b.活动水平与冲动控制"
+    },
+    {
+      "id": "att_b_2",
+      "text": "我会没想清楚就把话说出来",
+      "dimension": "ATT",
+      "attribute": "b.活动水平与冲动控制"
+    },
+    {
+      "id": "att_b_5",
+      "text": "需要等待时我会很急躁",
+      "dimension": "ATT",
+      "attribute": "b.活动水平与冲动控制"
+    },
+    {
+      "id": "att_d_3",
+      "text": "我手头有多件事情一直没有完成",
+      "dimension": "ATT",
+      "attribute": "d.任务完成与目标管理困难"
+    },
+    {
+      "id": "att_d_4",
+      "text": "我需要别人督促才能把事做完",
+      "dimension": "ATT",
+      "attribute": "d.任务完成与目标管理困难"
+    },
+    {
+      "id": "att_d_5",
+      "text": "该做的事我迟迟不开始做",
+      "dimension": "ATT",
+      "attribute": "d.任务完成与目标管理困难"
+    }
+  ]
+}

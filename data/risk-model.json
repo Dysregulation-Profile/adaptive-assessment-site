@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "questionVersion": "dp27-2026-09",
+  "modelVersion": "dp27-risk-2026-09-08",
+  "sourceModelSha256": "e6f0b9516c33c9017b9937e7d3f748819ef0eea89f2a944da40abb865b7c8df1",
+  "sourceMirtVersion": "1.46.1",
+  "mode": "fixed27_irt",
+  "dimensions": ["EMO", "BEH", "ATT"],
+  "coefficients": {
+    "intercept": -28.0627089905887,
+    "EMO": 10.5053728374762,
+    "BEH": 12.971871888426699,
+    "ATT": 12.802927612461
+  },
+  "riskThreshold": -1.62965508324504,
+  "thetaThresholds": {
+    "EMO": 0.370948487755138,
+    "BEH": 0.23902191742812201,
+    "ATT": 0.57637536010682899
+  }
+}

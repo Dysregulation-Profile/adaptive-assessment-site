@@ -1,0 +1,188 @@
+/*
+ * Third-party attribution
+ *
+ * Portions of the initial interface styling in this stylesheet were adapted
+ * from SBTI: https://github.com/pingfanfan/SBTI
+ *
+ * MIT License
+ *
+ * Copyright (c) 2026
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Realtime Colors core palette */
+  --color-text: #252F38;
+  --color-background: #F5F4F1;
+  --color-primary: #3D566E;
+  --color-secondary: #E5EBF0;
+  --color-accent: #B08A5B;
+
+  /* Surfaces and typography */
+  --color-surface: #FFFEFC;
+  --color-text-secondary: rgba(37, 47, 56, 0.72);
+  --color-text-muted: rgba(37, 47, 56, 0.68);
+
+  /* Lines and interaction states */
+  --color-border: #CDD5DB;
+  --color-border-strong: #AAB8C3;
+  --color-divider: #D9DEE2;
+  --color-primary-hover: #344B60;
+  --color-primary-soft: #E5EBF0;
+  --color-option-hover: #F4F7F9;
+
+  /* Accent states */
+  --color-accent-soft: #F2EADF;
+  --color-accent-text: #765B38;
+
+  /* Semantic status colors */
+  --color-danger: #A13D35;
+  --color-warning-text: #765A20;
+  --color-warning-background: #FBF4DD;
+  --color-warning-border: #EAD9AA;
+
+  --radius: 12px;
+  font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  color: var(--color-text);
+  background: var(--color-background);
+  line-height: 1.6;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; min-width: 280px; background: var(--color-background); }
+button { font: inherit; cursor: pointer; touch-action: manipulation; }
+button:disabled { cursor: default; }
+button, summary { -webkit-tap-highlight-color: transparent; }
+summary { min-height: 44px; padding-block: 10px; }
+button:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 4px; }
+h1:focus { outline: none; }
+h1, h2, p { margin: 0; }
+[hidden] { display: none !important; }
+.app {
+  max-width: 640px; min-height: 100vh; min-height: 100dvh; margin: 0 auto; padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  display: flex; align-items: center; justify-content: center;
+}
+.app.is-result { align-items: flex-start; }
+.card {
+  width: 100%; padding: 32px 24px; border-radius: var(--radius); background: var(--color-surface);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 6%); animation: enter 180ms ease-out;
+}
+@keyframes enter { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.intro-card { padding: 44px 32px; text-align: center; }
+.loading-card .intro-description { margin-bottom: 0; }
+.intro-title { font-size: 2rem; font-weight: 800; line-height: 1.35; color: var(--color-text); }
+.intro-description { margin: 20px auto 28px; max-width: 28em; color: var(--color-text-muted); }
+.intro-copy {
+  max-width: 34em; margin: 30px auto 0; color: var(--color-text-secondary);
+  font-size: 1rem; line-height: 1.8; text-align: left;
+}
+.intro-copy p + p { margin-top: 18px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 8px;
+  padding: 13px 30px; min-height: 48px; font-weight: 600; line-height: 1.5;
+  transition: background 150ms ease, transform 150ms ease;
+}
+.btn-primary { color: #FFFFFF; background: var(--color-primary); }
+.intro-card .btn-primary { margin-top: 24px; padding: 14px 48px; }
+.btn-secondary { color: var(--color-primary); background: var(--color-secondary); }
+@media (hover: hover) {
+  .btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+  .btn-secondary:hover { background: var(--color-border); }
+}
+.fine-print { color: var(--color-text-muted); font-size: .8125rem; line-height: 1.65; }
+.intro-card > .fine-print { margin-top: 8px; }
+.intro-card > .intro-disclaimer { margin-top: 22px; text-align: center; }
+.quiz-card { padding: 24px 20px; }
+.progress-track { height: 4px; background: var(--color-secondary); border-radius: 2px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--color-primary); transition: width 180ms ease; }
+.progress-caption { display: flex; justify-content: space-between; gap: 12px; margin-top: 8px; color: var(--color-text-muted); font-size: .8125rem; }
+.progress-note { margin-top: 7px; }
+.review-kicker, .edit-warning { margin-top: 14px; padding: 10px 12px; border-radius: 8px; text-align: left; font-size: .8125rem; line-height: 1.65; }
+.review-kicker { color: var(--color-primary); background: var(--color-secondary); }
+.edit-warning { color: var(--color-warning-text); background: var(--color-warning-background); border: 1px solid var(--color-warning-border); }
+.question-context { margin-top: 22px; color: var(--color-text-muted); font-size: .875rem; }
+.question-text { color: var(--color-text); font-size: 1.05rem; font-weight: 500; line-height: 1.7; margin: 8px 0 24px; overflow-wrap: anywhere; }
+.options { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.option {
+  display: block; width: 100%; min-height: 52px; padding: 14px 18px; text-align: left;
+  background: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 8px; color: var(--color-text);
+  font-size: .95rem; font-weight: 400; line-height: 1.5; transition: border-color 120ms ease, background 120ms ease;
+}
+@media (hover: hover) { .option:not(:disabled):hover { border-color: var(--color-primary); background: var(--color-option-hover); } }
+.option[aria-pressed="true"] { background: var(--color-secondary); border-color: var(--color-primary); color: var(--color-text); }
+.option.is-confirmed { background: var(--color-primary); color: #FFFFFF; border-color: var(--color-primary); }
+.question-nav { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; }
+.text-button { border: 0; background: transparent; color: var(--color-primary); padding: 10px 0; min-width: 44px; min-height: 44px; font-size: .875rem; }
+.text-button:disabled { color: var(--color-text-muted); opacity: .55; }
+.next-button { margin-left: auto; font-weight: 600; }
+.question-hint { margin-top: 8px; text-align: center; }
+.error-message { margin-top: 12px; color: var(--color-danger); font-size: .875rem; }
+.result-card { text-align: center; padding: 32px 20px; }
+.result-kicker { color: var(--color-text-muted); font-size: .875rem; font-weight: 400; }
+.adaptive-result-count { display: inline-block; margin-top: 14px; background: var(--color-accent-soft); color: var(--color-accent-text); border-radius: 20px; padding: 6px 16px; font-size: .875rem; font-variant-numeric: tabular-nums; }
+.adaptive-stop-reason { margin-top: 9px; color: var(--color-text-muted); font-size: .875rem; }
+.risk-panel { margin: 18px 0 26px; padding: 24px 18px; background: var(--color-secondary); border-radius: var(--radius); }
+.risk-kicker { color: var(--color-text-muted); font-size: .8125rem; letter-spacing: .15em; }
+.risk-type { margin: 8px 0 14px; font-size: 1.7rem; line-height: 1.4; font-weight: 800; color: var(--color-primary); overflow-wrap: anywhere; }
+.risk-description { color: var(--color-text); font-size: .9375rem; line-height: 1.8; text-align: left; }
+.risk-dimensions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 20px; }
+.risk-dimension { display: flex; flex-direction: column; gap: 4px; padding: 12px 4px; border: 1px solid var(--color-border-strong); border-radius: 8px; background: var(--color-surface); }
+.risk-dimension.is-positive { border-color: var(--color-primary); }
+.risk-dimension-name { color: var(--color-text); font-size: .9375rem; font-weight: 600; }
+.risk-dimension-state { color: var(--color-text-muted); font-size: .75rem; }
+.risk-dimension.is-positive .risk-dimension-state { color: var(--color-accent-text); font-weight: 600; }
+.risk-details { margin-top: 18px; text-align: left; color: var(--color-text-secondary); font-size: .8125rem; overflow-wrap: anywhere; }
+.risk-details summary { cursor: pointer; color: var(--color-primary); }
+.risk-details p { margin-top: 10px; }
+.result-intro { margin: 20px auto 0; max-width: 31em; color: var(--color-text-secondary); font-size: .9375rem; text-align: left; line-height: 1.8; }
+.section-title { color: var(--color-text); font-size: 1rem; font-weight: 700; margin: 28px 0 12px; }
+.radar { display: block; width: 100%; max-width: 340px; height: auto; margin: 0 auto; overflow: visible; }
+.chart-caption { margin: -3px 0 16px; }
+.estimate-dimensions { text-align: left; }
+.estimate-row { padding: 14px 0; border-bottom: 1px solid var(--color-divider); }
+.estimate-row:last-child { border-bottom: 0; }
+.estimate-count { color: var(--color-primary); font-size: .875rem; font-variant-numeric: tabular-nums; }
+.estimate-values { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; color: var(--color-text-secondary); font-size: .875rem; font-variant-numeric: tabular-nums; }
+.partial-score-details { margin-top: 22px; }
+.dimension-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.dimension-name { color: var(--color-text); font-size: .9375rem; font-weight: 600; }
+.score-details { text-align: left; border-top: 1px solid var(--color-divider); margin-top: 18px; padding-top: 16px; font-size: .875rem; color: var(--color-text-secondary); }
+.score-details summary { cursor: pointer; color: var(--color-primary); }
+.score-details p { margin-top: 10px; }
+.result-note { margin-top: 24px; padding: 16px; background: var(--color-secondary); border-radius: 8px; text-align: left; color: var(--color-text-secondary); }
+.result-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+.noscript { max-width: 600px; padding: 24px; margin: 24px auto; }
+@media (max-width: 480px) {
+  .intro-title { font-size: 1.6rem; }
+  .intro-card { padding: 36px 20px; }
+  .intro-copy { margin-top: 26px; font-size: .9375rem; line-height: 1.8; }
+  .intro-copy p + p { margin-top: 16px; }
+  .quiz-card, .result-card { padding: 24px 16px; }
+  .intro-description { font-size: .9375rem; }
+  .risk-panel { padding: 20px 12px; }
+  .risk-type { font-size: 1.45rem; }
+  .radar-label { font-size: 21px; }
+  .radar-value { font-size: 19px; }
+  .result-actions > .btn { flex: 1; padding-inline: 16px; }
+}
+@media (max-height: 650px) { .app { align-items: flex-start; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

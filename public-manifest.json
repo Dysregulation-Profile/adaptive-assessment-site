@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": ".nojekyll",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app.js",
+      "size": 16832,
+      "sha256": "4275397336f10f5ec45af97dc3f3c61a9f8abb917e340e6e878210ca36fc5771"
+    },
+    {
+      "path": "data/adaptive-strategy.json",
+      "size": 2247,
+      "sha256": "a560fad92b1cc3c640cf0edc76f94c13e276b9eefc9518dce0c5f76539d09984"
+    },
+    {
+      "path": "data/eap-grid.json",
+      "size": 2093450,
+      "sha256": "60c9a8c80ae85d2291f684c27c398c9921332034b28719847e1e11cee5820cf4"
+    },
+    {
+      "path": "data/irt-model.json",
+      "size": 15604,
+      "sha256": "457e327b34d089eda5f3f9c81d6d980e53d358a7ecda9d75eaeaea933bffe845"
+    },
+    {
+      "path": "data/questionnaire.json",
+      "size": 5700,
+      "sha256": "3c2fa5ec2c7c5d3db998c511f414ed0f1dc9c8bbee930f9296c1671eafb2637d"
+    },
+    {
+      "path": "data/risk-model.json",
+      "size": 599,
+      "sha256": "5731c4391ff11e5ac6671509e29d77a7f23aa0cf0fcf13c3bcd791219e35763d"
+    },
+    {
+      "path": "index.html",
+      "size": 1299,
+      "sha256": "528093c9510c4cc0417195ee49f2d4e203ec88347f0558e6e49564ccefd3e268"
+    },
+    {
+      "path": "src/cat.js",
+      "size": 17010,
+      "sha256": "eb23d5489c396d12215a05ffc632b55878530cbd26d6d27c1cb44f4c40f66186"
+    },
+    {
+      "path": "src/chart.js",
+      "size": 3176,
+      "sha256": "8d0558fc529569ad00613006f7e848bb66080a364a99a9739b7380b5168d9aa5"
+    },
+    {
+      "path": "src/eap.js",
+      "size": 7041,
+      "sha256": "bf6b72159d4a03b65d28274dfeb382e48a657c7b67a6c4caa2ac00e360b3b81b"
+    },
+    {
+      "path": "src/grm.js",
+      "size": 3941,
+      "sha256": "9cf8d00aea92525be7b34c0b04a79b649652058a666dc28d15cc2cff59a5c3da"
+    },
+    {
+      "path": "src/pser.js",
+      "size": 3414,
+      "sha256": "085acaeeeeea2693d41e9cc3d984c3371a9ddd66bc7595fc12588b0111e480af"
+    },
+    {
+      "path": "src/questionnaire.js",
+      "size": 3695,
+      "sha256": "5179f155ab9d54193e50a32b876309c171ca7c0c247cdd7c51ad4d00d3a8f0ce"
+    },
+    {
+      "path": "src/risk.js",
+      "size": 6972,
+      "sha256": "adaffabebc0472d56816238e3ef22dcd1e6baa730ede682c8ca489665f24ba95"
+    },
+    {
+      "path": "src/session.js",
+      "size": 5310,
+      "sha256": "9894c7d3f057164d985f53fcc78f62bf5f21cafbc160b1f2e54a2177f87007c9"
+    },
+    {
+      "path": "style.css",
+      "size": 11551,
+      "sha256": "98196c0aaaf660861e88bee2fa85fa278862fc2a8420a9f39f65e915973672bc"
+    }
+  ]
+}

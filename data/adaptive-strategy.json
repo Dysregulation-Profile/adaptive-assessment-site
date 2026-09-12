@@ -1,0 +1,113 @@
+{
+  "strategyVersion": "dp27-mcat-pser-2026-09-11",
+  "mode": "mcat_adaptive",
+  "questionVersion": "dp27-2026-09",
+  "modelVersion": "dp27-risk-2026-09-08",
+  "modelSha256": "e6f0b9516c33c9017b9937e7d3f748819ef0eea89f2a944da40abb865b7c8df1",
+  "dimensions": [
+    "EMO",
+    "BEH",
+    "ATT"
+  ],
+  "itemIds": [
+    "anx_a_1",
+    "anx_a_3",
+    "anx_a_4",
+    "anx_b_1",
+    "anx_b_2",
+    "anx_b_5",
+    "anx_c_2",
+    "anx_c_4",
+    "anx_c_5",
+    "agg_a_1",
+    "agg_a_2",
+    "agg_a_3",
+    "agg_b_1",
+    "agg_b_3",
+    "agg_b_4",
+    "agg_d_2",
+    "agg_d_3",
+    "agg_d_5",
+    "att_a_2",
+    "att_a_3",
+    "att_a_4",
+    "att_b_1",
+    "att_b_2",
+    "att_b_5",
+    "att_d_3",
+    "att_d_4",
+    "att_d_5"
+  ],
+  "dimensionItems": {
+    "EMO": [
+      "anx_a_1",
+      "anx_a_3",
+      "anx_a_4",
+      "anx_b_1",
+      "anx_b_2",
+      "anx_b_5",
+      "anx_c_2",
+      "anx_c_4",
+      "anx_c_5"
+    ],
+    "BEH": [
+      "agg_a_1",
+      "agg_a_2",
+      "agg_a_3",
+      "agg_b_1",
+      "agg_b_3",
+      "agg_b_4",
+      "agg_d_2",
+      "agg_d_3",
+      "agg_d_5"
+    ],
+    "ATT": [
+      "att_a_2",
+      "att_a_3",
+      "att_a_4",
+      "att_b_1",
+      "att_b_2",
+      "att_b_5",
+      "att_d_3",
+      "att_d_4",
+      "att_d_5"
+    ]
+  },
+  "initialItems": [
+    "anx_b_1",
+    "anx_b_5",
+    "agg_a_2",
+    "agg_a_1",
+    "att_a_3",
+    "att_a_4"
+  ],
+  "estimator": {
+    "method": "EAP",
+    "quadpts": 31,
+    "theta_lim": [
+      -6,
+      6
+    ]
+  },
+  "stopping": {
+    "minItems": 6,
+    "minPerDimension": 2,
+    "earliestStop": 8,
+    "maxItems": 27,
+    "thetaDeltaThreshold": 0.1,
+    "thetaDeltaComparator": "strictly_less_than",
+    "consecutiveStableUpdates": 2,
+    "seThreshold": 0.5,
+    "pserMetric": "expected_maximum_standard_error_reduction",
+    "pserThreshold": 0.005,
+    "pserComparator": "strictly_less_than",
+    "consecutivePserUpdates": 2
+  },
+  "selection": {
+    "initial": "top_two_information_per_dimension_at_theta_zero",
+    "afterMinimum": "maximum_standard_error_dimension_then_highest_information_remaining",
+    "dimensionTieBreak": "EMO_BEH_ATT_order",
+    "itemTieBreak": "final27_canonical_order",
+    "exhaustedDimensionFallback": "all_remaining_final27_canonical_order"
+  }
+}
