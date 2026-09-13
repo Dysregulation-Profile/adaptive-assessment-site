@@ -91,9 +91,15 @@ function renderIntro() {
   card.append(element('h1', 'intro-title', questionnaire.meta.title));
 
   const copy = element('div', 'intro-copy');
+  const answerGuidance = element('p', '');
+  answerGuidance.append(
+    document.createTextNode('请根据'),
+    element('strong', '', '过去 6 个月'),
+    document.createTextNode('内的实际情况作答。回答没有对错之分，请选择最符合你真实情况的选项；如果不能确定，请选择最接近你实际感受的选项。'),
+  );
   copy.append(
     element('p', '', '本测评用于了解成人在情绪调节、行为调控和注意控制三个方面的共同失调风险。本测评最多包含 27 道题，系统会根据你的作答动态选择后续题目，因此每个人实际完成的题目数量可能不同。'),
-    element('p', '', '请根据过去 6 个月内的实际情况作答。回答没有对错之分，请选择最符合你真实情况的选项；如果不能确定，请选择最接近你实际感受的选项。'),
+    answerGuidance,
     element('p', '', '本测评结果仅作为心理风险筛查和自我了解的参考，不能替代专业心理评估或临床诊断。若测评结果提示风险较高，可根据自身需要寻求专业心理咨询或医疗帮助。'),
     element('p', '', '我们将尊重并保护你的作答信息。你的作答将在当前浏览器中完成处理和计算，仅用于生成本次测评结果展示，不会上传至服务器，也不会被保存或用于与本次测评无关的用途。'),
   );
@@ -283,7 +289,8 @@ function riskPanel(risk) {
   const description = risk.isHigh
     ? `本次综合风险分达到阈值。${reached.length ? `${reached.join('、')}维度达到分型阈值。` : '三个维度各自处于分型阈值以下。'}`
     : '本次综合风险分处于高风险阈值以下。各维度状态可在下方查看。';
-  panel.append(element('p', 'risk-description', description));
+  const thresholdExplanation = '这里的“阈值”指用于判断是否达到相应风险分型条件的预设界限。';
+  panel.append(element('p', 'risk-description', `${description}${thresholdExplanation}`));
 
   const dimensions = element('div', 'risk-dimensions');
   risk.dimensions.forEach((dimension) => {
@@ -339,7 +346,12 @@ function renderResult() {
   card.append(element('p', 'adaptive-stop-reason', `停止原因：${stopText(session.cat.stopReason)}`));
   card.append(riskPanel(risk));
   card.append(element('h2', 'section-title', '三维估计'));
-  card.append(element('p', 'result-intro', 'θ反映题目参数与本次作答共同估计的维度位置；标准误表示这次估计的不确定性。图形使用θ估计，不使用未完成量表的1–5分原始得分。'));
+  const resultIntro = element('p', 'result-intro');
+  resultIntro.append(
+    element('strong', '', 'θ反映题目参数与本次作答共同估计的维度位置'),
+    document.createTextNode('；标准误表示这次估计的不确定性。图形使用θ估计，不使用未完成量表的1–5分原始得分。'),
+  );
+  card.append(resultIntro);
 
   const estimateDimensions = risk.dimensions.map((dimension) => ({
     ...dimension,
