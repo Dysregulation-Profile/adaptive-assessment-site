@@ -86,19 +86,18 @@ function renderFatal(error) {
 }
 
 function renderIntro() {
-  const { questionnaire, strategy } = runtime;
+  const { questionnaire } = runtime;
   const card = element('section', 'card intro-card');
   card.append(element('h1', 'intro-title', questionnaire.meta.title));
 
   const copy = element('div', 'intro-copy');
   copy.append(
-    element('p', '', `您好！本次测评旨在了解您${questionnaire.meta.recallPeriod}在情绪、行为与注意等方面的情况。`),
-    element('p', '', `本测评题库共${questionnaire.items.length}题，采用自适应方式进行测评。实际作答题数会根据您的作答情况动态确定，最多${strategy.stopping.maxItems}题。`),
-    element('p', '', `请根据${questionnaire.meta.recallPeriod}的实际情况作答。回答没有对错之分，请选择最符合您真实情况的选项。如果不能确定，请选择最接近您实际感受的选项。`),
-    element('p', '', '作答与结果计算均在当前浏览器本地完成。答案不会上传服务器，也不会写入浏览器持久化存储。刷新或关闭页面后，本次会话将被清除。'),
+    element('p', '', '本测评用于了解成人在情绪调节、行为调控和注意控制三个方面的共同失调风险。本测评最多包含 27 道题，系统会根据你的作答动态选择后续题目，因此每个人实际完成的题目数量可能不同。'),
+    element('p', '', '请根据过去 6 个月内的实际情况作答。回答没有对错之分，请选择最符合你真实情况的选项；如果不能确定，请选择最接近你实际感受的选项。'),
+    element('p', '', '本测评结果仅作为心理风险筛查和自我了解的参考，不能替代专业心理评估或临床诊断。若测评结果提示风险较高，可根据自身需要寻求专业心理咨询或医疗帮助。'),
+    element('p', '', '我们将尊重并保护你的作答信息。你的作答将在当前浏览器中完成处理和计算，仅用于生成本次测评结果展示，不会上传至服务器，也不会被保存或用于与本次测评无关的用途。'),
   );
   card.append(copy);
-  card.append(element('p', 'fine-print intro-disclaimer', '仅供研究参考，结果不作为临床诊断。'));
 
   const start = element('button', 'btn btn-primary', '开始测评');
   start.type = 'button';
