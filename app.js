@@ -289,8 +289,10 @@ function riskPanel(risk) {
   const description = risk.isHigh
     ? `本次综合风险分达到阈值。${reached.length ? `${reached.join('、')}维度达到分型阈值。` : '三个维度各自处于分型阈值以下。'}`
     : '本次综合风险分处于高风险阈值以下。各维度状态可在下方查看。';
-  const thresholdExplanation = '这里的“阈值”指用于判断是否达到相应风险分型条件的预设界限。';
-  panel.append(element('p', 'risk-description', `${description}${thresholdExplanation}`));
+  const thresholdExplanation = element('p', 'risk-description',
+    '阈值是预先设定的判定界限，用于判断综合风险分是否达到高风险标准，以及各维度 θ 是否达到相应的分型标准。');
+  thresholdExplanation.style.marginTop = '10px';
+  panel.append(element('p', 'risk-description', description), thresholdExplanation);
 
   const dimensions = element('div', 'risk-dimensions');
   risk.dimensions.forEach((dimension) => {
